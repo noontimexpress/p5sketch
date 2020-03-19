@@ -4,13 +4,13 @@ let fr = 3;
 function setup() {
     createCanvas(400, 400);
     frameRate(fr);
-    for (let i=0; i < 3; i++){
+    for (let i=0; i < 100; i++){
         crazy[i] = new Eyes(random(width), random(height));
     }
 }
 function draw(){
     background(000);
-    for (let i=0; i < 3; i++){
+    for (let i=0; i < 100; i++){
         let arbit = random(0,100);
         noStroke();
         fill(999, random(256));
