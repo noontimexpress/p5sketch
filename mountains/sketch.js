@@ -7,8 +7,9 @@ let first = 0;
 let runX = 0;
 let inc = 0.01;
 
-let testLines = 3;
+let testLines = 8;
 let ratio = canvasSize / testLines;
+
 
 function setup() {
   createCanvas(canvasSize, canvasSize);
@@ -19,8 +20,8 @@ function draw() {
   noStroke();
 
   for (i = 0; i < testLines; i++) {
-    fill(20, 0, 200, 256 / testLines);
-    let anyLine = map(noise(first), 0, 1, 0 + ratio * i, 100 + ratio * i);
+    fill(40, 40, 200, 256 / testLines);
+    let anyLine = map(noise(first), 0, 1, 0 + ratio * i, 100);
     rect(runX, anyLine, 1, height - anyLine);
   }
   first = first + inc;
